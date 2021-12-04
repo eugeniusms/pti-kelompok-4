@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import FilmForm, SFilmForm
 from django.http import HttpRequest
+from .models import SFilm
 
 # Create your views here.
 def AddFilm(request):
@@ -28,4 +29,8 @@ def SFilm_detail(request):
     return render(request, 'form.html', {'form' : form})
 
 def Movies(request):
-    return render(request, 'app1/movies.html')
+    movie_list = SFilm.objects.all()
+    context = {
+        'movie_list' : movie_list
+    }
+    return render(request, 'app1/movies.html',  context)

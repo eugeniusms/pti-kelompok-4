@@ -1,5 +1,4 @@
 from django import forms
-from django.forms import ModelForm
 from .models import SFilm
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Submit
@@ -10,7 +9,7 @@ class FilmForm(forms.Form):
     poster = forms.ImageField(label='Poster Film ')
     trailer = forms.CharField(label='Link Trailer ')
     genre = forms.CharField(label='Genre Film ')
-    tahun_rilis = forms.CharField() 
+    tahun_rilis = forms.DateField() 
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -26,7 +25,7 @@ class FilmForm(forms.Form):
 
         )
 
-class SFilmForm(ModelForm):
+class SFilmForm(forms.ModelForm):
     class Meta:
         model = SFilm
         fields = ('judul', 'poster', 'trailer', 'genre', 'tahun_rilis')

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="movies.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,28 @@
 
     <!-- Mode menghapus memunculkan semua tombol untuk menghapus film dari database  -->
     <button>Menghapus Film</button>
+    <br>
+    <br>
+    <div>
+        <hr>
+        <hr>
+        {% for movie in movie_list %}
+        <div class = "daftar_film">
+            <p><b>{{ movie.judul }}</b></p>
+            <hr>
+            <p>{{ movie.poster }}</p>
+            <iframe width="400" height="250" src={{ movie.trailer }}></iframe>
+            <p>{{ movie.genre }}</p>
+            <p>{{ movie.tahun_rilis }}</p>
+            
+            <button>Like</button>
+            <button>Dislike</button>
+            <button>Remove</button>
+            <hr>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
 
 </body>
 </html>
