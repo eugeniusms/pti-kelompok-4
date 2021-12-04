@@ -17,5 +17,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.Film),
+    path('', views.Movies),
+    path('movies', views.Movies),
+    path('form', views.AddFilm)
 ]

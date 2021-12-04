@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms.models import ModelForm
 
 # Create your models here.
 class SFilm(models.Model):
