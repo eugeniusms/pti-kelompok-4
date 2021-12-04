@@ -10,7 +10,7 @@ class FilmForm(forms.Form):
     poster = forms.ImageField(label='Poster Film ')
     trailer = forms.CharField(label='Link Trailer ')
     genre = forms.CharField(label='Genre Film ')
-    tahun_rilis = forms.DateField() 
+    tahun_rilis = forms.CharField() 
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

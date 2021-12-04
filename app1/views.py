@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import FilmForm
+from .forms import FilmForm, SFilmForm
 from django.http import HttpRequest
 
 # Create your views here.
@@ -24,7 +24,7 @@ def SFilm_detail(request):
         if form.is_valid():
             form.save()
 
-    form = FilmForm()
+    form = SFilmForm()
     return render(request, 'form.html', {'form' : form})
 
 def Movies(request):
