@@ -1,7 +1,7 @@
-PROJECT AKHIR PTI - Kelompok 4
+**FINAL PROJECT PTI - Kelompok 4**
 
-1. Eugenius Mario Situmorang
-2. Jeremy Alva Prathama
-3. Kevin
-4. Maria Aurellia
-5. Raden Dhaneswara TBR
+1. Kevin
+2. Maria Aurellia
+3. Raden Dhaneswara TBR
+4. Jeremy Alva Prathama
+5. Eugenius Mario Situmorang
