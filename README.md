@@ -1,5 +1,5 @@
 ## CSUI'2021
-# FINAL PROJECT PTI - Kelompok 4
+# FINAL PROJECT PTI - Group 4
 
 1. Kevin
 2. Maria Aurellia
