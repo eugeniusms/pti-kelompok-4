@@ -7,7 +7,7 @@ class SFilm(models.Model):
     trailer = models.CharField(max_length=100)
     genre = models.CharField(max_length=100)
     tahun_rilis = models.DateTimeField()
-    likes = models.ManyToManyField()
+    likes = models.CharField(max_length=100)
 
     def __str__(self):
         return self.judul
