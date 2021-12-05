@@ -22,7 +22,7 @@
         {% for movie in movie_list %}
         <div class = "daftar_film">
             <hr>
-            <p>{{ movie.poster }}</p>
+            <img src={{ movie.poster.url }}>
             <iframe width="400" height="250" src={{ movie.trailer }}></iframe>
             <p><b>{{ movie.judul }}</b></p>
             <p>{{ movie.genre }}</p>
@@ -39,3 +39,5 @@
 
 </body>
 </html>
+
+<!-- rm -rf <nama folder>-->

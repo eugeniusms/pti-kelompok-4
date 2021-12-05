@@ -1,20 +1,20 @@
 from django.shortcuts import render
-from .forms import FilmForm, SFilmForm
+from .forms import FilmForm, SFilmForm, FilmAja
 from django.http import HttpRequest
 from .models import SFilm
 
 # Create your views here.
 def AddFilm(request):
     if request.method == 'POST':
-        form = FilmForm(request.POST)
+        print("MASUK KE SINI")
+        form = FilmAja(request.POST, request.FILES)
+        print(form.errors)
         if form.is_valid():
 
-            judul = request.POST.get('Judul Film ')
-            genre = request.POST.get('Genre Film ')
-
-            print(judul, genre)
-
-    form = FilmForm()
+            print("FORMNYA VALID")
+            form.save()
+            
+    form = FilmAja()
     return render(request, 'app1/form.html', {'form' : form})
 
 

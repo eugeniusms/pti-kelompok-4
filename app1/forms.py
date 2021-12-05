@@ -29,3 +29,8 @@ class SFilmForm(forms.ModelForm):
     class Meta:
         model = SFilm
         fields = ('judul', 'poster', 'trailer', 'genre', 'tahun_rilis')
+
+class FilmAja(forms.ModelForm):
+    class Meta:
+        model = SFilm
+        fields = "__all__"
