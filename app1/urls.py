@@ -21,7 +21,10 @@ from . import views
 urlpatterns = [
     path('', views.Movies),
     path('movies', views.Movies),
-    path('form', views.AddFilm)
+    path('form', views.AddFilm),
+    path('year_ascending', views.YearAscending),
+    path('year_descending', views.YearDescending),
+    path('likes_descending', views.LikesDescending)
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
