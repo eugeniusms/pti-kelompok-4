@@ -60,3 +60,14 @@ class LikesDescending(APIView):
         serializers = SortSerializer(movie_sorted, many = True)
         print(serializers)
         return Response(serializers.data)
+    
+# Tambahin punya Jere tapi belum ke serializer
+def SearchResultsView(request):
+    query = request.GET.get('q')
+    searched_movies = SFilm.objects.filter(judul__icontains=query)
+    context = {
+        'searched_movies': searched_movies
+    }
+    template_name = 'app1/search_results.html'
+
+    return render(request, template_name, context) 
