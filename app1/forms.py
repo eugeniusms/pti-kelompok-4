@@ -34,3 +34,16 @@ class FilmAja(forms.ModelForm):
     class Meta:
         model = SFilm
         fields = "__all__"
+        
+# Tambahan fitur search bar dari Jere  
+class SearchFilmForm(forms.ModelForm):
+    # Expand to search by tahun
+    class Meta:
+        model = SFilm
+        fields = ['judul']
+        widgets = {
+            'searched_movie': forms.TextInput(attrs={
+                'placeholder': 'Cari film...',
+                'required': False
+            })
+        }
