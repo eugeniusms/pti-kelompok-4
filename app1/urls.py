@@ -22,9 +22,9 @@ urlpatterns = [
     path('', views.Movies),
     path('movies', views.Movies),
     path('form', views.AddFilm),
-    path('year_ascending', views.YearAscending),
-    path('year_descending', views.YearDescending),
-    path('likes_descending', views.LikesDescending)
+    path('year_ascending', views.YearAscending.as_view()),
+    path('year_descending', views.YearDescending.as_view()),
+    path('likes_descending', views.LikesDescending.as_view())
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
