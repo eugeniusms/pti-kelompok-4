@@ -62,7 +62,7 @@ class LikesDescending(APIView):
         return Response(serializers.data)
     
 # Tambahin punya Jere tapi belum ke serializer
-def SearchResultsView(request):
+class SearchResultsView(request):
     query = request.GET.get('q')
     searched_movies = SFilm.objects.filter(judul__icontains=query)
     context = {
