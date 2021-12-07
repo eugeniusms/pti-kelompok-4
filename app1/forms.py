@@ -22,7 +22,6 @@ class FilmForm(forms.Form):
             'genre',
             'tahun_rilis',
             Submit('submit', 'Submit', css_class="btn-success")
-
         )
 
 class SFilmForm(forms.ModelForm):
@@ -34,3 +33,16 @@ class FilmAja(forms.ModelForm):
     class Meta:
         model = SFilm
         fields = "__all__"
+
+class SearchFilmForm(forms.ModelForm):
+    # Expand to search by tahun
+    class Meta:
+        model = SFilm
+        fields = ['judul']
+        widgets = {
+            'searched_movie': forms.TextInput(attrs={
+                'placeholder': 'Cari film...',
+                'required': False
+            })
+        }
+        

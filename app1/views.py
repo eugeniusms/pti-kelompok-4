@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import FilmForm, SFilmForm
 from django.http import HttpRequest
 from .models import SFilm
+from django.views.generic import ListView
 
 # Create your views here.
 def AddFilm(request):
@@ -55,3 +56,14 @@ def LikesDescending(request):
         'movie_sorted' : movie_sorted
     }
     return render(request, 'app1/movie_sorted.html', context)
+
+
+def SearchResultsView(request):
+    query = request.GET.get('q')
+    searched_movies = SFilm.objects.filter(judul__icontains=query)
+    context = {
+        'searched_movies': searched_movies
+    }
+    template_name = 'app1/search_results.html'
+
+    return render(request, template_name, context)

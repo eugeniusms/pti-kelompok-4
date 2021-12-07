@@ -24,20 +24,16 @@
     <div>
         <hr>
         <hr>
-        {% for movie in movie_list %}
-        <div class = "daftar_film">
-            <hr>
+        {% for movie in searched_movies %}
+        <div class="daftar_film">
             <img src={{ movie.poster.url }}>
             <iframe width="400" height="250" src={{ movie.trailer }}></iframe>
-            <p><b>{{ movie.judul }}</b></p>
+            <p>{{ movie.judul }}</p>
             <p>{{ movie.genre }}</p>
             <p>{{ movie.tahun_rilis }}</p>
-            
             <button><input width="45" height = "30" type="image" name="Like" src="https://e7.pngegg.com/pngimages/385/728/png-clipart-emoji-facebook-emoticon-heart-facebook-love-emoji-heart-illustration-miscellaneous-text.png" alt="text"></button>
             <button>Dislike</button>
             <button>Remove</button>
-            <hr>
-            <hr>
         </div>
         {% endfor %}
     </div>

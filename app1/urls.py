@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from os import name
 from film import settings
 from django.conf.urls.static import static
 from django.urls import path
@@ -24,7 +25,8 @@ urlpatterns = [
     path('form', views.AddFilm),
     path('year_ascending', views.YearAscending),
     path('year_descending', views.YearDescending),
-    path('likes_descending', views.LikesDescending)
+    path('likes_descending', views.LikesDescending),
+    path('search/', views.SearchResultsView, name='search_results')
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
