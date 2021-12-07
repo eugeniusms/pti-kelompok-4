@@ -48,11 +48,15 @@ class YearAscending(APIView):
 class YearDescending(APIView):
     def get(self,request):
         movie_sorted = SFilm.objects.all().order_by("-tahun_rilis", "judul")
+        
         serializers = SortSerializer(movie_sorted, many = True)
         return Response(serializers.data)
 
 class LikesDescending(APIView):
     def get(self,request):
-        movie_sorted = SFilm.objects.all().order_by("genre", "-likes", "judul")
+        print("hallo")
+        movie_sorted = SFilm.objects.all().order_by("-tahun_rilis", "judul")
+        print("dibawah get")
         serializers = SortSerializer(movie_sorted, many = True)
+        print(serializers)
         return Response(serializers.data)
