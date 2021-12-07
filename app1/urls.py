@@ -25,6 +25,8 @@ urlpatterns = [
     path('year_ascending', views.YearAscending.as_view()),
     path('year_descending', views.YearDescending.as_view()),
     path('likes_descending', views.LikesDescending.as_view())
+    # Tambahin punya Jere tapi belum serializer
+    path('search/', views.SearchResultsView, name='search_results')
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
