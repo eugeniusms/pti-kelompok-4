@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="movies.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelompok 4</title>
 </head>
 <body, style="padding: 25px">
-    <h1>PTI-IV</h1>
-    <p>Selamat datang! Kami menyediakan layanan streaming dan rekomendasi gratis yang tentu terbaik untuk anda.</p>
-    <button><a href="form">Menambahkan Film</a></button>
+    <h1>MOVIE PAK TEI</h1>
+    <p>Selamat datang di link streaming kami!</p>
+    <button class = "glow-on-hover" type=button><a href="form">Menambahkan Film</a></button>
 
     <!-- Mode menghapus memunculkan semua tombol untuk menghapus film dari database  -->
-    <button>Menghapus Film</button>
+    <button class = "glow-on-hover" type=button>Menghapus Film</button>
     <br>
     <br>
     <div>
@@ -27,9 +28,9 @@
             <p>{{ movie.genre }}</p>
             <p>{{ movie.tahun_rilis }}</p>
             
-            <button><input width="45" height = "30" type="image" name="Like" src="https://e7.pngegg.com/pngimages/385/728/png-clipart-emoji-facebook-emoticon-heart-facebook-love-emoji-heart-illustration-miscellaneous-text.png" alt="text"></button>
-            <button>Dislike</button>
-            <button>Remove</button>
+            <button class = "type"><input width="45" height = "30" type="image" name="Like" src="https://e7.pngegg.com/pngimages/385/728/png-clipart-emoji-facebook-emoticon-heart-facebook-love-emoji-heart-illustration-miscellaneous-text.png" alt="text"></button>
+            <button class = "glow-on-hover">Dislike</button>
+            <button class = "glow-on-hover">Remove</button>
             <hr>
             <hr>
         </div>
